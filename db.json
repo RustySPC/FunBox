@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "top": "Сказочное заморское яство",
+      "title": "Нямушка",
+		"subtitle": "с фуа-гра",
+		"info": [
+      {
+      "bold": "10",
+      "content": "порций"
+    },
+    {
+      "content": "мышь в подарок"
+    }
+   ],
+   "img": "../img/cat.png",
+		"weight": "0,5",
+    "selected" : false,
+    "selectedInfo":"Печень утки разварная с артишоками."
+    },
+	 {
+      "id": 2,
+      "top": "Сказочное заморское яство",
+      "title": "Нямушка",
+		"subtitle": "с рыбой",
+    
+		"info": [
+      {
+      "bold": "40",
+      "content": "порций"
+    },
+    {
+      "bold": "2",
+      "content": "мыши в подарок"
+    }
+  ],
+   "img": "../img/cat.png",
+
+		"weight": "2",
+    "selected" : false,
+    "selectedInfo":"Головы щучьи с чесноком да свежайшая сёмгушка."
+    },
+	 {
+      "id": 3,
+      "top": "Сказочное заморское яство",
+      "title": "Нямушка",
+		"subtitle": "с курой",
+		"info": [
+      {
+      "bold": "100",
+      "content": "порций"
+    },
+    {
+      "bold": "5",
+      "content": "мышей в подарок заказчик доволен"
+    }
+  ],
+   "img": "./img/cat.png",
+		"weight": "5",
+    "selected" : false,
+		"disabled" : true,
+    "selectedInfo":"Филе из цыплят с трюфелями в бульоне."
+    }
+
+  ]
+}

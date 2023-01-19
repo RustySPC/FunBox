@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import React,{ useEffect, useState } from 'react';
+import './App.scss';
+import CartItem from './components/card';
 
 function App() {
+  const [items, setItems] = useState();
+  useEffect(() => {
+    axios
+      .get('http://localhost:3001/items')
+      .then(({ data }) => {
+        setItems(data);
+      });
+  }, []);
+  const onSelect = (index) => {
+    if (index) {
+       const newItems = items.map(item => {
+         if (item.id === index) {
+        item.hover = false
+        item.selected = !item.selected
+      }
+      return item;
+       });
+    setItems(newItems);
+      
+    }
+     
+    // console.log(newList);
+    // setItems(!items[index].selected)
+  }
+  const addHover = (index) => {
+    if (index) {
+      const newItems = items.map(item => {
+        item.hover = true
+      return item;
+      });
+      console.log(newItems);
+    setItems(newItems);
+    }
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <section className="cart">
+      <div className='cart__container'>
+        <div className="cart__title _title">Ты сегодня покормил кота?</div>
+        <div className="cart__row">
+          {items ? (
+            <CartItem
+              content={items}
+              onSelect={onSelect}
+              addHover={addHover}
+            />
+          ): 'Загрузка...'}
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default App;
