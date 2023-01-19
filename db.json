@@ -14,7 +14,7 @@
       "content": "мышь в подарок"
     }
    ],
-   "img": "../img/cat.png",
+   "img": "./img/cat.png",
 		"weight": "0,5",
     "selected" : false,
     "selectedInfo":"Печень утки разварная с артишоками."
@@ -35,7 +35,7 @@
       "content": "мыши в подарок"
     }
   ],
-   "img": "../img/cat.png",
+   "img": "./img/cat.png",
 
 		"weight": "2",
     "selected" : false,
