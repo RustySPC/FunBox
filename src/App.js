@@ -7,7 +7,7 @@ function App() {
   const [items, setItems] = useState();
   useEffect(() => {
     axios
-      .get('http://localhost:3001/items')
+      .get('https://my-json-server.typicode.com/RustySPC/FunBox/items')
       .then(({ data }) => {
         setItems(data);
       });
@@ -24,9 +24,6 @@ function App() {
     setItems(newItems);
       
     }
-     
-    // console.log(newList);
-    // setItems(!items[index].selected)
   }
   const addHover = (index) => {
     if (index) {
